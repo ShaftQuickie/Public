@@ -10,7 +10,7 @@ Send out mail if Admin Password has less then 7 days to expire, and log the noti
    Author:         Daniel Olsson
    Creation Date:  Thursday, September 12th 2019, 1:23:17 pm
    File: NotifyDollarUsers.ps1
-   Copyright (c) 2019 Strålfors
+   Copyright (c) 2019 
 HISTORY:
 Date      	          By	Comments
 ----------	          ---	----------------------------------------------------------
@@ -23,7 +23,7 @@ Date      	          By	Comments
 
 
 $Today = (Get-Date).ToString("dd/MM/yyyy")
-$PSDollar = Get-PSdollar | Where-Object {$_.mail -ne 'xkraand@stralfors.se' -and $_.mail -ne 'Daniel.Olsson@stralfors.se' -and $_.mail -ne 'Daniel.Olsson1@stralfors.no'}
+$PSDollar = Get-PSdollar | Where-Object {$_.mail -ne 'xxxx' -and $_.mail -ne 'xxxx' -and $_.mail -ne 'xxxx'}
 
 foreach ($User in $PSDollar)  {
 
@@ -74,15 +74,15 @@ foreach ($User in $PSDollar)  {
         #Email Settings
         $MailProp = @{ 
     
-        From = 'noreply@stralfors.no';
+        From = 'xxxx';
         Subject = 'Your DollarUser password will expire soon!';
-        Smtpserver = 'srv0005.stralfors.se'
+        Smtpserver = 'xxxx'
         To = $to
         Body = $Body
         } #MAILPROPS
         
         #Send the mail message
-         Send-MailMessage @MailProp -bcc 'daniel.olsson@stralfors.no' -BodyAsHtml -Encoding Unicode
+         Send-MailMessage @MailProp -bcc 'xxxx' -BodyAsHtml -Encoding Unicode
 
          $Log= ($Timestamp + " Notified $To")
          $Log | Out-File D:\Get-PSdollar\Log.log
