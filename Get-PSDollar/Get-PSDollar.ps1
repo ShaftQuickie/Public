@@ -12,7 +12,7 @@ Use verbose parameter to get Verbose output
    Author:         Daniel Olsson
    Creation Date:  Wednesday, September 25th 2019, 8:18:33 am
    File: Get-PSdollar.ps1
-   Copyright (c) 2019 Strålfors
+   Copyright (c) 
 HISTORY:
 Date      	          By	Comments
 ----------	          ---	----------------------------------------------------------
@@ -71,8 +71,8 @@ function Get-PSdollar {
   } #MAIL
 
       $Mail += [PSCustomObject]@{
-      'Mail' = "Ridwan.Seid@stralfors.no";
-      'Displayname' = "Ridwan Seid"
+      'Mail' = "xxx@stralfors.no";
+      'Displayname' = "xxxx"
 
   } #MAIL
 
